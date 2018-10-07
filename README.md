@@ -2,7 +2,8 @@
 The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [WordPress](https://wordpress.org/)
 
 ![Screenshot](https://raw.githubusercontent.com/arnabwahid/octopress/master/screenshot.png)
-<span align="right">Theme Screenshot</span>
+`Theme Screenshot`
+---
 
 ### Why use this theme?
 I really like the Octopress default theme, I think it looks great for a tech blog, and very readable. As I somewhat despise the ___designing___ part of a theme, I just started on top on the explicitely fine-tuned Octopress static template. Hey! The classic octopress theme itself was based on the Twenty Twelve WordPress Theme!
