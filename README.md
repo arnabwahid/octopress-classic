@@ -2,7 +2,9 @@
 The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [WordPress](https://wordpress.org/)
 
 ![Screenshot](https://raw.githubusercontent.com/arnabwahid/octopress/master/screenshot.png)
-`Theme Screenshot`
+
+_Theme Screenshot_
+
 ---
 
 ### Why use this theme?
