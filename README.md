@@ -4,7 +4,7 @@ The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [W
 ![screenshot](#)
 
 ### Why use this theme?
-I really like the Octopress default theme, I think is stanard looking and very readable. As I somewhat despise the ___designing___ part of a theme, I just started on top on the explicitely fine-tuned Octopress static template. Hey! The classic octopress theme itself was based on the Twenty Twelve WordPress Theme!
+I really like the Octopress default theme, I think it looks great for a tech blog, and very readable. As I somewhat despise the ___designing___ part of a theme, I just started on top on the explicitely fine-tuned Octopress static template. Hey! The classic octopress theme itself was based on the Twenty Twelve WordPress Theme!
 
 ### Why didn't you use Octopress?
 Octopress at this point is abandoned. There is not really any reason not to move on.
@@ -14,11 +14,9 @@ I made this theme for my blog, just for personal use; which requred very few fea
 
 ### Enabling Features
 
-##### Syntax Highlighting:
-You can use [highlight.js](https://highlightjs.org/) or any other alternative with `solarized-dark` style, and you will get exact same highlight that is used in the original Octopress theme. Addition css classes has been taken care of.
+__Syntax Highlighting:__ You can use [highlight.js](https://highlightjs.org/) or any other alternative with `solarized-dark` style, and you will get exact same highlight that is used in the original Octopress theme. Addition css classes has been taken care of.
 
-##### Linklog:
-Linklog support is already built in in the theme loops. Use The [DFLL plugin](https://wordpress.org/plugins/daring-fireball-linked-list/) to write linked list posts.
+__Linklog:__ Linklog support is already built in in the theme loops. Use The [DFLL plugin](https://wordpress.org/plugins/daring-fireball-linked-list/) to write linked list posts.
 
 ### Roadmap
 - Page templates
