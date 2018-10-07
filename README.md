@@ -1,6 +1,8 @@
 # Octopress Classic Theme for WordPress
 The Octopress Classic Theme Ported to WordPress
 
+![screenshot](#)
+
 ### Why use this theme?
 I really like the Octopress default theme, I think is stanard looking and very readable. As I somewhat despise the ___designing___ part of a theme, I just started on top on the explicitely fine-tuned Octopress static template. Hey! The classic octopress theme itself was based on the Twenty Twelve WordPress Theme!
 
