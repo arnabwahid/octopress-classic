@@ -1,5 +1,5 @@
 # Octopress Classic Theme for WordPress
-A port of the octopress classic theme to WordPress
+The Octopress Classic Theme Ported to WordPress
 ---
 
 ### Why use this theme?
