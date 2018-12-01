@@ -162,3 +162,7 @@
 	}
 
 	add_action('wp_enqueue_scripts', 'octopress_enqueue_comments_reply');
+
+	function is_linked_list() {
+		return false;
+	}
