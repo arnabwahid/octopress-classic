@@ -3,7 +3,7 @@
  * Template: index.php
  *
  * @package    WordPress
- * @subpackage wp-octopress-2
+ * @subpackage wp-octopress
  * @since      1.0
  */
 
