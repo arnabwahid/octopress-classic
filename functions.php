@@ -21,6 +21,19 @@ if ( function_exists( 'register_sidebar' ) ) {
 }
 
 /**
+ * Where can we get to the archive page.
+ *
+ * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @since  1.0
+ */
+function octopress_the_archive_link() {
+	global $wpdb;
+	$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC" );
+	$year  = current( $years );
+	echo esc_url( home_url( $year->year ) );
+}
+
+/**
  * Comment.
  *
  * @author Previous Author
