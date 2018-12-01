@@ -11,4 +11,4 @@ Text Domain: octopress
 PHP:         > 5.6.20
 */
 
-@import 'octopress.css';
+@import 'octopress-classic.css';
