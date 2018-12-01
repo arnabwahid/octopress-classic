@@ -81,7 +81,5 @@
 </article>
 
 <section>
-	<?php if ( is_single() ) : ?>
-		<?php comments_template(); ?>
-	<?php endif; ?>
+	<?php comments_template(); ?>
 </section>
