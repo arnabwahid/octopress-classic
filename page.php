@@ -1,6 +1,6 @@
 <?php
 /**
- * Template: page.php
+ * Part: page.php
  *
  * @package    WordPress
  * @subpackage wp-octopress

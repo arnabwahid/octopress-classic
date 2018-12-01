@@ -1,49 +1,49 @@
 <?php
-	/*
-	Template Name: Archives
-	 */
-	get_header(); ?>
+/**
+ * Part: archive.php
+ *
+ * @package    WordPress
+ * @subpackage wp-octopress
+ * @since      1.0
+ */
 
-<!-- Static Starts -->
+?>
+
+<?php get_header(); ?>
+
 <div id="main">
-    <div id="content">
-        <div>
-            <article role="article">
+	<div id="content">
+		<div class="container">
+			<article role="article">
+				<header>
+					<h1 class="entry-title">Blog Archive</h1>
+				</header>
 
-                <header>
-                    <h1 class="entry-title">Blog Archive</h1>
-
-                </header>
-
-                <div id="blog-archives">
-
-                    <!--start -->
+				<div id="blog-archives">
 					<?php
-						// get years that have posts
-						$years = $wpdb->get_results("SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC");
+						$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC" );
 
 						foreach ( $years as $year ) {
-							// get posts for each year
-							$posts_this_year = $wpdb->get_results("SELECT post_title FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = '" . $year->year . "'");
 
-							echo '<h2>' . $year->year . '</h2>';
+							$posts_this_year = $wpdb->get_results( $wpdb->prepare( "SELECT post_title FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = %s", $year->year ) );
+
+							echo wp_kses_post( "<h2>{$year->year}</h2>" );
+
 							foreach ( $posts_this_year as $post ) {
-								echo '<article><h1><a href="' . get_the_permalink() . '">' . $post->post_title . '</a></h1>';
-								echo "<time datetime=\"" . get_the_time('c') . "\" pubdate><span class='month'>" . get_the_time('M') . "</span> <span class='day'>" . get_the_time('d') . "</span> <span class='year'>" . get_the_time('Y') . "</span></time>";
-								echo '</article>';
+								echo wp_kses_post( '<article><h1><a href="' . get_the_permalink() . '">' . $post->post_title . '</a></h1>' );
+								echo wp_kses_post( '<time datetime=QQ' . get_the_time( 'c' ) . "QQ pubdate><span class='month'>" . get_the_time( 'M' ) . "</span> <span class='day'>" . get_the_time( 'd' ) . "</span> <span class='year'>" . get_the_time( 'Y' ) . '</span></time>' );
+								echo wp_kses_post( '</article>' );
 							}
 						}
-					?>
-                    <!--end-->
-                </div><!-- blog archives -->
+				?>
+				</div>
+			</article>
+		</div>
 
-            </article>
-        </div>
-        <aside class="sidebar thirds">
+		<aside class="sidebar thirds">
 			<?php dynamic_sidebar(); ?>
-        </aside>
-    </div><!-- #content -->
-
-</div> <!-- content-->
+		</aside>
+	</div>
+</div>
 
 <?php get_footer(); ?>
