@@ -16,7 +16,7 @@
 		<div class="container">
 			<article role="article">
 				<header>
-					<h1 class="entry-title">Blog Archive</h1>
+					<h1 class="entry-title"><?php esc_html_e( 'Blog Archive', 'wp-octopress' ); ?></h1>
 				</header>
 
 				<div id="blog-archives">
