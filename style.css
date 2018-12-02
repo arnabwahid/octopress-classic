@@ -172,3 +172,7 @@ pre {
 aside.sidebar:hover a:visited {
 	color: #644b69;
 }
+
+.sidebar.thirds h1 {
+	margin-bottom: 10px;
+}

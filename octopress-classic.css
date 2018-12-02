@@ -665,8 +665,7 @@ body.sidebar-footer .toggle-sidebar {
     margin-left: 4%;
   }
   aside.sidebar.thirds section {
-    width: 30%;
-    margin-left: 5%;
+    width: 100%;
   }
   aside.sidebar.thirds section.first {
     margin-left: 0;
