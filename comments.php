@@ -12,8 +12,7 @@
 <?php
 
 if ( post_password_required() ) {
-	echo wp_kses_post( '<p class="nocomments">' . __( 'This post is password protected. Enter the password to view comments.', 'wp-octopress' ) . '</p>' );
-		return;
+	return;
 }
 
 ?>
@@ -34,7 +33,78 @@ if ( post_password_required() ) {
 			<?php
 
 			wp_list_comments( array(
-				'callback' => 'octopress_comment',
+				'callback' => function( $comment, $args, $depth ) {
+					$GLOBALS['comment'] = $comment; // @codingStandardsIgnoreLine: @TODO What is this even doing!?
+
+					switch ( $comment->comment_type ) : // @TODO: Don't use switch!
+						case 'pingback':
+						case 'trackback':
+							?>
+
+							<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+								<p><?php esc_html_e( 'Pingback:', 'wp-octopress' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'wp-octopress' ), '<span class="edit-link">', '</span>' ); ?></p>
+							</li>
+
+							<?php
+
+							break;
+						default:
+							global $post;
+
+							?>
+
+							<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+								<article id="comment-<?php comment_ID(); ?>" class="comment">
+									<header class="comment-meta comment-author vcard">
+
+									<?php
+
+									printf(
+										'<cite class="fn">%1$s</cite>',
+										get_comment_author_link()
+									);
+
+									echo '&nbsp;';
+
+									printf(
+										'<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+										esc_url( get_comment_link( $comment->comment_ID ) ),
+										get_comment_time( 'c' ),
+										/* translators: 1: date, 2: time */
+										wp_kses_post( sprintf( __( '%1$s at %2$s', 'wp-octopress' ), get_comment_date(), get_comment_time() ) )
+									);
+
+									?>
+
+									</header><!-- .comment-meta -->
+
+									<?php if ( 0 === absint( $comment->comment_approved ) ) : ?>
+										<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'wp-octopress' ); ?></p>
+									<?php endif; ?>
+
+									<section class="comment-content comment">
+										<?php comment_text(); ?>
+										<?php edit_comment_link( __( 'Edit', 'wp-octopress' ), '<p class="edit-link">', '</p>' ); ?>
+									</section><!-- .comment-content -->
+
+									<div class="reply">
+										<?php
+
+										comment_reply_link(array_merge( $args, array(
+											'reply_text' => __( 'Reply', 'wp-octopress' ),
+											'after'      => ' <span>&darr;</span>',
+											'depth'      => $depth,
+											'max_depth'  => $args['max_depth'],
+										) ) );
+
+										?>
+									</div><!-- .reply -->
+								</article><!-- #comment-## -->
+							</li>
+
+							<?php
+					endswitch;
+				},
 				'style'    => 'ul',
 			) );
 

@@ -12,3 +12,8 @@ PHP:         > 5.6.20
 */
 
 @import 'octopress-classic.css';
+
+body header .avatar {
+	float: right;
+	border-radius: 5px;
+}

@@ -37,9 +37,10 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php body_class(); ?>>
 		<header role="banner">
 			<hgroup>
+				<?php octopress_avatar(); ?>
 				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
