@@ -10,9 +10,9 @@
 ?>
 
 <?php if ( is_page() ) : ?>
-	<article class="hentry" id="page" role="article">
+	<article <?php post_class( 'hentry' ); ?> id="page" role="article">
 <?php else : ?>
-	<article class="hentry" role="article">
+	<article <?php post_class( 'hentry' ); ?> role="article">
 <?php endif; ?>
 
 	<header>
