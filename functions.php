@@ -73,6 +73,12 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 } );
 
+add_action( 'wp_head', function() {
+	if ( defined( 'OCTOPRESS_STYLES' ) && is_string( OCTOPRESS_STYLES ) ) {
+		echo OCTOPRESS_STYLES; // @codingStandardsIgnoreLine
+	}
+} );
+
 /**
  * Legacy function.
  *

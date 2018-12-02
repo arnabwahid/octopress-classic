@@ -15,6 +15,17 @@ PHP:         > 5.6.20
 
 @import 'octopress-classic.css';
 
+@media only screen and (max-width: 782px) {
+	.avatar {
+		display: none;
+	}
+
+	html {
+		position: absolute;
+		top: -46px;
+	}
+}
+
 body header .avatar {
 	float: right;
 	border-radius: 5px;
@@ -63,6 +74,13 @@ input[type="button"] {
 	padding: 0 5px;
 }
 
+input,
+textarea,
+button {
+	border: 1px solid #0000001f;
+	border-radius: 5px;
+}
+
 .wp-audio-shortcode {
 	margin: 15px 0;
 }
@@ -94,4 +112,55 @@ input[type="button"] {
 	border-radius: 5px;
 	border: 1px solid #0000001a;
 	margin: 20px 0;
+}
+
+.commentlist > li.comment #respond {
+	margin-top: 20px;
+	padding: 20px;
+	background: white;
+	box-shadow: 0px 0px 23px #00000030;
+	border-radius: 5px;
+}
+
+.commentlist > li.comment #respond .form-submit {
+	margin-bottom: 0;
+}
+
+#respond textarea {
+	width: 98%;
+}
+
+#commentform label {
+	display: none;
+}
+
+#respond .logged-in-as {
+	font-size: 90%;
+	margin-bottom: 0;
+	padding: 0 10px;
+}
+
+.comment-form-comment {
+	margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		box-shadow: 0px 0px 53px #00000080;
+		margin-top: 70px;
+	}
+
+	body > header {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+}
+
+body > nav {
+	margin-bottom: -1px;
+}
+
+body > header h1 {
+	font-weight: bold;
+	text-shadow: 1px 1px #00000036;
 }
