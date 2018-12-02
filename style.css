@@ -205,3 +205,15 @@ body.single #content .blog-index > article > article:first-child {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+article img.no-border,
+article video.no-border,
+article .flash-video.no-border,
+article img.noborder,
+article video.noborder,
+article .flash-video.noborder {
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: none;
+}
