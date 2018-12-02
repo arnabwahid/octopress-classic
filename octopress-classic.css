@@ -154,10 +154,10 @@ a:visited {
   color: #644b69;
 }
 a:focus {
-  color: #67a59d;
+  color: #1f747e;
 }
 a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 a:active {
   color: #01579f;
@@ -166,10 +166,10 @@ aside.sidebar a {
   color: #17777e;
 }
 aside.sidebar a:focus {
-  color: #67a59d;
+  color: #1f747e;
 }
 aside.sidebar a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 aside.sidebar a:active {
   color: #01579f;
@@ -1192,7 +1192,7 @@ article > footer p.meta {
   color: inherit;
 }
 #content .blog-index article h1 a:hover {
-  color: #67a59d;
+  color: #1f747e;
   text-decoration: none;
 }
 #content .blog-index a[rel="full-article"] {
@@ -1208,7 +1208,7 @@ article > footer p.meta {
   transition: background-color 0.5s;
 }
 #content .blog-index a[rel="full-article"]:hover {
-  background: #67a59d;
+  background: #1f747e;
   text-shadow: none;
   color: #f8f8f8;
 }
@@ -1246,7 +1246,7 @@ article > footer .byline ~ .categories:before {
   right: 0;
 }
 #content div.pagination a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 #content div.pagination a[href*="archive"]:before,
 #content div.pagination a[href*="archive"]:after {
@@ -1858,7 +1858,7 @@ figure.code figcaption a:hover {
   text-decoration: underline;
 }
 #blog-archives h1 a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 #blog-archives a.category,
 #blog-archives time {
@@ -1887,10 +1887,10 @@ figure.code figcaption a:hover {
 }
 #blog-archives a:hover,
 #blog-archives .entry-content a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 #blog-archives a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 @media only screen and (min-width: 550px) {
   #blog-archives article {
@@ -1994,7 +1994,7 @@ aside.sidebar:hover a {
   color: #17777e;
 }
 aside.sidebar:hover a:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 .aside-alt-link,
 #tweets a[href*="twitter.com/search"],
@@ -2004,7 +2004,7 @@ aside.sidebar:hover a:hover {
 .aside-alt-link:hover,
 #tweets a[href*="twitter.com/search"]:hover,
 #pinboard_linkroll .pin-tag:hover {
-  color: #67a59d;
+  color: #1f747e;
 }
 @media only screen and (min-width: 768px) {
   .toggle-sidebar {
@@ -2172,7 +2172,7 @@ textarea {
   color: red;
 }
 #post-permalink {
-  color: #67a59d;
+  color: #1f747e;
 }
 
 #blog-archives article h1 a:hover {
