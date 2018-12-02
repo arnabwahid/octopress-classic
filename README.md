@@ -1,7 +1,7 @@
 # Octopress Classic Theme for WordPress
 The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [WordPress](https://wordpress.org/)
 
-![Screenshot](https://raw.githubusercontent.com/arnabwahid/octopress/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/aubreypwd/wp-octopress-classic-2/master/screenshot.png)
 
 _Theme Screenshot_
 
