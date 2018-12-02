@@ -11,9 +11,12 @@ Text Domain: octopress
 PHP:         > 5.6.20
 */
 
+/* sass-lint:disable-all */
+
 @import 'octopress-classic.css';
 
 body header .avatar {
 	float: right;
 	border-radius: 5px;
+	border: 1px solid #00000094;
 }
