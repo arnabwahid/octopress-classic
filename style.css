@@ -187,6 +187,7 @@ body.page #content header:first-child {
 	padding-top: 0;
 }
 
-body.home #content .blog-index > article > article:first-child {
+body.home #content .blog-index > article > article:first-child,
+body.single #content .blog-index > article > article:first-child {
 	padding-top: 0;
 }
