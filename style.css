@@ -191,3 +191,17 @@ body.home #content .blog-index > article > article:first-child,
 body.single #content .blog-index > article > article:first-child {
 	padding-top: 0;
 }
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
