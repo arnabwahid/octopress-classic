@@ -50,7 +50,7 @@
 
 			<!-- Mobile Nav -->
 			<ul class="subscription" data-subscription="rss">
-					<li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+				<li><a href="<?php echo esc_url( get_feed_link() ); ?>" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
 			</ul>
 
 			<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

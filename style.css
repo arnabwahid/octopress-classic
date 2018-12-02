@@ -20,3 +20,15 @@ body header .avatar {
 	border-radius: 5px;
 	border: 1px solid #00000094;
 }
+
+.main-navigation li > ul {
+	display: none;
+}
+
+body > nav {
+	border-bottom: 0;
+}
+
+body > nav form .search {
+	line-height: 1.6em;
+}
