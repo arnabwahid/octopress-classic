@@ -1,0 +1,12 @@
+{
+    "name": "aubreypwd/octopress-classic",
+    "type": "project",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "authors": [
+        {
+            "name": "Aubrey Portwood",
+            "email": "aubreypwd@gmail.com"
+        }
+    ],
+    "require": {}
+}
