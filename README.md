@@ -24,3 +24,11 @@ The Octopress classic theme was created by Brandon Mathis. Its source can be fou
 ### Theme license
 
 Open sourced under the [GPL-2](https://www.gnu.org/licenses/gpl-2.0.txt).
+
+_______
+
+# Changelog
+
+## 1.0.0
+
+- Forked, cooked a little more, released
