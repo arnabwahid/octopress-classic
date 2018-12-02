@@ -148,28 +148,28 @@ summary {
   display: block;
 }
 a {
-  color: #1863a1;
+  color: #17777e;
 }
 a:visited {
   color: #751590;
 }
 a:focus {
-  color: #0181eb;
+  color: #67a59d;
 }
 a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 a:active {
   color: #01579f;
 }
 aside.sidebar a {
-  color: #1863a1;
+  color: #17777e;
 }
 aside.sidebar a:focus {
-  color: #0181eb;
+  color: #67a59d;
 }
 aside.sidebar a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 aside.sidebar a:active {
   color: #01579f;
@@ -1193,7 +1193,7 @@ article > footer p.meta {
   color: inherit;
 }
 #content .blog-index article h1 a:hover {
-  color: #0181eb;
+  color: #67a59d;
   text-decoration: none;
 }
 #content .blog-index a[rel="full-article"] {
@@ -1209,7 +1209,7 @@ article > footer p.meta {
   transition: background-color 0.5s;
 }
 #content .blog-index a[rel="full-article"]:hover {
-  background: #0181eb;
+  background: #67a59d;
   text-shadow: none;
   color: #f8f8f8;
 }
@@ -1247,7 +1247,7 @@ article > footer .byline ~ .categories:before {
   right: 0;
 }
 #content div.pagination a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 #content div.pagination a[href*="archive"]:before,
 #content div.pagination a[href*="archive"]:after {
@@ -1370,7 +1370,7 @@ html .gist .gist-file .gist-meta a[href*="#file"] {
   color: #474747 !important;
 }
 html .gist .gist-file .gist-meta a[href*="#file"]:hover {
-  color: #1863a1 !important;
+  color: #17777e !important;
 }
 html .gist .gist-file .gist-meta a[href*="raw"] {
   top: 0.4em;
@@ -1859,7 +1859,7 @@ figure.code figcaption a:hover {
   text-decoration: underline;
 }
 #blog-archives h1 a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 #blog-archives a.category,
 #blog-archives time {
@@ -1888,10 +1888,10 @@ figure.code figcaption a:hover {
 }
 #blog-archives a:hover,
 #blog-archives .entry-content a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 #blog-archives a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 @media only screen and (min-width: 550px) {
   #blog-archives article {
@@ -1992,10 +1992,10 @@ aside.sidebar a {
   transition: color 0.5s;
 }
 aside.sidebar:hover a {
-  color: #1863a1;
+  color: #17777e;
 }
 aside.sidebar:hover a:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 .aside-alt-link,
 #tweets a[href*="twitter.com/search"],
@@ -2005,7 +2005,7 @@ aside.sidebar:hover a:hover {
 .aside-alt-link:hover,
 #tweets a[href*="twitter.com/search"]:hover,
 #pinboard_linkroll .pin-tag:hover {
-  color: #0181eb;
+  color: #67a59d;
 }
 @media only screen and (min-width: 768px) {
   .toggle-sidebar {
@@ -2162,7 +2162,7 @@ textarea {
 .meta > a {
   text-decoration: none;
   text-transform: capitalize;
-  color: #1863a1;
+  color: #17777e;
 }
 .linked-post-permalink {
   padding-left: 0.25em;
@@ -2173,7 +2173,7 @@ textarea {
   color: red;
 }
 #post-permalink {
-  color: #0181eb;
+  color: #67a59d;
 }
 
 #blog-archives article h1 a:hover {
