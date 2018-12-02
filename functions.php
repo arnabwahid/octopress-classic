@@ -3,14 +3,14 @@
  * Theme Functions
  *
  * @package    WordPress
- * @subpackage wp-octopress-classic-2
+ * @subpackage octopress-classic
  * @since      1.0
  */
 
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'wp-octopress-classic-2' ),
+			'name'          => __( 'Sidebar', 'octopress-classic' ),
 			'id'            => 'sidebar-1',
 			'before_widget' => '',
 			'after_widget'  => '</section>',

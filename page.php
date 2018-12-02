@@ -3,7 +3,7 @@
  * Part: page.php
  *
  * @package    WordPress
- * @subpackage wp-octopress-classic-2
+ * @subpackage octopress-classic
  * @since      1.0
  */
 
