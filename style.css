@@ -37,3 +37,32 @@ body > nav form .search {
 .entry-content > ol {
 	margin-left: 20px;
 }
+
+dl,
+table {
+	margin-bottom: 15px;
+}
+
+p > code {
+	margin: 15px 0 15px;
+}
+
+.entry-content img,
+.entry-content .wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	font-size: 70%;
+	text-align: center;
+}
+
+input[type="submit"],
+button,
+input[type="button"] {
+	padding: 0 5px;
+}
+
+.wp-audio-shortcode {
+	margin: 15px 0;
+}
