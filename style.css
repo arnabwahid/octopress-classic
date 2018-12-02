@@ -180,3 +180,7 @@ aside.sidebar:hover a:visited {
 body.archive #content div.pagination {
 	background: none !important;
 }
+
+body.archive #content header:first-child {
+	padding-top: 0;
+}
