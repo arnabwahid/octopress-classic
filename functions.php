@@ -23,6 +23,26 @@ if ( function_exists( 'register_sidebar' ) ) {
 add_theme_support( 'title-tag' ); // Let WP handle the title tag.
 
 /**
+ * Pagination.
+ *
+ * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @since  1.0.0
+ */
+function octopress_pagination() {
+	?>
+
+	<?php if ( ! is_single() ) : ?>
+		<div class="pagination">
+			<?php next_posts_link( '&larr; Older' ); ?>
+			<a href="<?php octopress_the_archive_link(); ?>"><?php esc_html_e( 'Blog Archives', 'octopress-classic' ); ?></a>
+			<?php previous_posts_link( 'Newer &rarr;' ); ?>
+		</div>
+	<?php endif; ?>
+
+	<?php
+}
+
+/**
  * The avatar.
  *
  * @author Aubrey Portwood <aubrey@webdevstudios.com>

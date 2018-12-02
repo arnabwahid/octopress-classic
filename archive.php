@@ -16,26 +16,33 @@
 		<div class="container">
 			<article role="article">
 				<header>
-					<h1 class="entry-title"><?php esc_html_e( 'Blog Archive', 'octopress-classic' ); ?></h1>
+					<?php if ( is_category() || is_tag() ) : ?>
+						<h1 class="entry-title"><?php single_cat_title(); ?></h1>
+					<?php else : ?>
+						<h1 class="entry-title"><?php the_archive_title(); ?></h1>
+					<?php endif; ?>
 				</header>
 
 				<div id="blog-archives">
-					<?php
-						$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC" );
+					<h2>&darr;</h2>
 
-						foreach ( $years as $year ) {
+					<?php if ( have_posts() ) : ?>
+						<?php while ( have_posts() ) : ?>
+							<?php the_post(); ?>
 
-							$posts_this_year = $wpdb->get_results( $wpdb->prepare( "SELECT post_title,ID FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' AND YEAR(post_date) = %s", $year->year ) );
 
-							echo wp_kses_post( "<h2>{$year->year}</h2>" );
+							<article>
+								<h1><?php the_title(); ?></h1>
+								<time datetime="" pubdate>
+									<span class="month"><?php echo wp_kses_post( get_the_time( 'M' ) ); ?></span>
+									<span class="day"><?php echo wp_kses_post( get_the_time( 'd' ) ); ?></span>
+									<span class="year"></span>
+								</time>
+							</article>
+						<?php endwhile; ?>
+					<?php endif; ?>
 
-							foreach ( $posts_this_year as $post ) {
-								echo wp_kses_post( '<article><h1><a href="' . get_permalink( $post->ID ) . '">' . $post->post_title . '</a></h1>' );
-								echo wp_kses_post( '<time datetime=QQ' . get_the_time( 'c' ) . "QQ pubdate><span class='month'>" . get_the_time( 'M' ) . "</span> <span class='day'>" . get_the_time( 'd' ) . "</span> <span class='year'>" . get_the_time( 'Y' ) . '</span></time>' );
-								echo wp_kses_post( '</article>' );
-							}
-						}
-				?>
+					<?php octopress_pagination(); ?>
 				</div>
 			</article>
 		</div>

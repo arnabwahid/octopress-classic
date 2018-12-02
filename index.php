@@ -22,14 +22,7 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 
-			<?php if ( ! is_single() ) : ?>
-				<div class="pagination">
-					<?php next_posts_link( '&larr; Older' ); ?>
-					<a href="<?php octopress_the_archive_link(); ?>"><?php esc_html_e( 'Blog Archives', 'octopress-classic' ); ?></a>
-					<?php previous_posts_link( 'Newer &rarr;' ); ?>
-				</div>
-			<?php endif; ?>
-
+			<?php octopress_pagination(); ?>
 		</div>
 
 		<aside class="sidebar thirds">

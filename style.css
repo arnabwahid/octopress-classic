@@ -176,3 +176,7 @@ aside.sidebar:hover a:visited {
 .sidebar.thirds h1 {
 	margin-bottom: 10px;
 }
+
+body.archive #content div.pagination {
+	background: none !important;
+}
