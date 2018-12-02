@@ -28,8 +28,9 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 
-				<?php octopress_pagination(); ?>
 			</article>
+
+			<?php octopress_pagination(); ?>
 		</div>
 
 		<aside class="sidebar thirds">
