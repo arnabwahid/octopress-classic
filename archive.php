@@ -14,6 +14,7 @@
 <div id="main">
 	<div id="content">
 		<div class="container">
+
 			<article role="article">
 				<header>
 					<?php if ( is_category() || is_tag() ) : ?>
@@ -30,7 +31,6 @@
 						<?php while ( have_posts() ) : ?>
 							<?php the_post(); ?>
 
-
 							<article>
 								<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 								<time datetime="" pubdate>
@@ -41,10 +41,10 @@
 							</article>
 						<?php endwhile; ?>
 					<?php endif; ?>
-
-					<?php octopress_pagination(); ?>
 				</div>
 			</article>
+
+			<?php octopress_pagination(); ?>
 		</div>
 
 		<aside class="sidebar thirds">
