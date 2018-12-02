@@ -32,3 +32,8 @@ body > nav {
 body > nav form .search {
 	line-height: 1.6em;
 }
+
+.entry-content > ul,
+.entry-content > ol {
+	margin-left: 20px;
+}
