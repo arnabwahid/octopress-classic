@@ -1,4 +1,4 @@
-# Octopress Classic Theme for WordPress 2
+# OctoPress Classic
 
 The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [WordPress](https://wordpress.org/)
 
