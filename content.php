@@ -44,15 +44,17 @@
 			<?php endif; ?>
 
 		<?php else : ?>
-			<?php if ( is_linked_list() ) : ?>
-				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> |
-					<a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
-				</p>
-			<?php else : ?>
-				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
-				</p>
+			<?php if ( ! is_page() ) : ?>
+				<?php if ( is_linked_list() ) : ?>
+					<p class="meta">
+						<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> |
+						<a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
+					</p>
+				<?php else : ?>
+					<p class="meta">
+						<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
+					</p>
+				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif; ?>
 	</header>
@@ -65,7 +67,7 @@
 		<?php endif; ?>
 	</div>
 
-	<?php if ( is_single() ) : ?>
+	<?php if ( is_single() && ! is_page() ) : ?>
 		<footer>
 			<p class="meta">
 				<span class="byline author vcard">
@@ -81,5 +83,7 @@
 </article>
 
 <section>
-	<?php comments_template(); ?>
+	<?php if ( ! is_page() ) : ?>
+		<?php comments_template(); ?>
+	<?php endif; ?>
 </section>

@@ -181,6 +181,8 @@ body.archive #content div.pagination {
 	background: none !important;
 }
 
-body.archive #content header:first-child {
+body.archive #content header:first-child,
+body.error404 #content header:first-child,
+body.page #content header:first-child {
 	padding-top: 0;
 }

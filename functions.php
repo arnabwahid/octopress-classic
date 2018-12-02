@@ -20,6 +20,16 @@ if ( function_exists( 'register_sidebar' ) ) {
 	);
 }
 
+/**
+ * Show the search value.
+ *
+ * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @since  1.0.0
+ */
+function octopress_s() {
+	return isset( $_REQUEST['s'] ) ? esc_html( $_REQUEST['s'] ) : ''; // @codingStandardsIgnoreLine: REQUEST access okay here.
+}
+
 add_theme_support( 'title-tag' ); // Let WP handle the title tag.
 
 /**
