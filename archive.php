@@ -32,7 +32,7 @@
 
 
 							<article>
-								<h1><?php the_title(); ?></h1>
+								<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 								<time datetime="" pubdate>
 									<span class="month"><?php echo wp_kses_post( get_the_time( 'M' ) ); ?></span>
 									<span class="day"><?php echo wp_kses_post( get_the_time( 'd' ) ); ?></span>
