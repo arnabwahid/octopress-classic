@@ -16,7 +16,6 @@
 <html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11"/>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 		<!--Fonts from Google's Web font directory at http://google.com/webfonts -->

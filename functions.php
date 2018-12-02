@@ -20,6 +20,8 @@ if ( function_exists( 'register_sidebar' ) ) {
 	);
 }
 
+add_theme_support( 'title-tag' ); // Let WP handle the title tag.
+
 /**
  * The avatar.
  *
