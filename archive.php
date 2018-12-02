@@ -3,7 +3,7 @@
  * Part: archive.php
  *
  * @package    WordPress
- * @subpackage wp-octopress
+ * @subpackage wp-octopress-classic-2
  * @since      1.0
  */
 
@@ -16,7 +16,7 @@
 		<div class="container">
 			<article role="article">
 				<header>
-					<h1 class="entry-title"><?php esc_html_e( 'Blog Archive', 'wp-octopress' ); ?></h1>
+					<h1 class="entry-title"><?php esc_html_e( 'Blog Archive', 'wp-octopress-classic-2' ); ?></h1>
 				</header>
 
 				<div id="blog-archives">

@@ -1,11 +1,11 @@
 /* sass-lint:disable-all */
 
 /**
- * Theme Name:  Octopress 2
- * Theme URI:   https://github.com/aubreypwd/wp-octopress
+ * Theme Name:  Octopress Classic 2
+ * Theme URI:   https://github.com/aubreypwd/wp-octopress-classic-2
  * Author:      Aubrey Portwood
  * Author URI:  http://aubreypwd.com
- * Description: The Octopress Classic Theme for WordPress
+ * Description: The Octopress Classic Theme for WordPress (version 2)
  * Version:     NEXT
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -144,7 +144,7 @@ button {
 	margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1210px) {
 	body {
 		box-shadow: 0px 0px 53px #00000080;
 		margin-top: 70px;

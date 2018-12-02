@@ -3,7 +3,7 @@
  * Part: content.php
  *
  * @package    WordPress
- * @subpackage wp-octopress
+ * @subpackage wp-octopress-classic-2
  * @since      1.0
  */
 
@@ -35,11 +35,11 @@
 		<?php if ( is_single() ) : ?>
 			<?php if ( is_linked_list() ) : ?>
 				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'wp-octopress' ); ?></a> | <a href="<?php the_linked_list_link(); ?>"><?php esc_html_e( 'External Link', 'wp-octopress' ); ?></a>
+					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'wp-octopress-classic-2' ); ?></a> | <a href="<?php the_linked_list_link(); ?>"><?php esc_html_e( 'External Link', 'wp-octopress-classic-2' ); ?></a>
 				</p>
 			<?php else : ?>
 				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'wp-octopress' ); ?></a>
+					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'wp-octopress-classic-2' ); ?></a>
 				</p>
 			<?php endif; ?>
 
@@ -69,7 +69,7 @@
 		<footer>
 			<p class="meta">
 				<span class="byline author vcard">
-					<?php esc_html_e( 'Posted by ', 'wp-octopress' ); ?><span class="fn"><?php the_author(); ?></span>
+					<?php esc_html_e( 'Posted by ', 'wp-octopress-classic-2' ); ?><span class="fn"><?php the_author(); ?></span>
 				</span>
 
 				<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>

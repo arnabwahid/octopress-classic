@@ -3,7 +3,7 @@
  * Part: index.php
  *
  * @package    WordPress
- * @subpackage wp-octopress
+ * @subpackage wp-octopress-classic-2
  * @since      1.0
  */
 
@@ -25,7 +25,7 @@
 			<?php if ( ! is_single() ) : ?>
 				<div class="pagination">
 					<?php next_posts_link( '&larr; Older' ); ?>
-					<a href="<?php octopress_the_archive_link(); ?>"><?php esc_html_e( 'Blog Archives', 'wp-octopress' ); ?></a>
+					<a href="<?php octopress_the_archive_link(); ?>"><?php esc_html_e( 'Blog Archives', 'wp-octopress-classic-2' ); ?></a>
 					<?php previous_posts_link( 'Newer &rarr;' ); ?>
 				</div>
 			<?php endif; ?>
