@@ -1172,7 +1172,7 @@ article > footer p.meta {
     top left repeat-x;
 }
 .blog-index article:first-child {
-  background: none;
+  background-image: none;
 }
 #content .blog-index {
   padding-top: 0;
@@ -1386,7 +1386,7 @@ pre {
   font-size: 13px;
   margin-bottom: 2.1em;
   padding: 0.8em 1em;
-  color: #93a1a1;
+  color: #dbdbdb;
   overflow: auto;
 }
 h3.filename + pre {
