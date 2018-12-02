@@ -1,6 +1,9 @@
 {
     "name": "aubreypwd/octopress-classic",
-    "type": "project",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0"
+    },
     "license": "GNU GENERAL PUBLIC LICENSE",
     "authors": [
         {
