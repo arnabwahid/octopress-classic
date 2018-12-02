@@ -1,17 +1,17 @@
-/*
-Theme Name:  Octopress 2
-Theme URI:   https://github.com/aubreypwd/wp-octopress
-Author:      Aubrey Portwood
-Author URI:  http://aubreypwd.com
-Description: The Octopress Classic Theme for WordPress
-Version:     NEXT
-License:     GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: octopress
-PHP:         > 5.6.20
-*/
-
 /* sass-lint:disable-all */
+
+/**
+ * Theme Name:  Octopress 2
+ * Theme URI:   https://github.com/aubreypwd/wp-octopress
+ * Author:      Aubrey Portwood
+ * Author URI:  http://aubreypwd.com
+ * Description: The Octopress Classic Theme for WordPress
+ * Version:     NEXT
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: octopress
+ * PHP:         > 5.6.20
+ */
 
 @import 'octopress-classic.css';
 
