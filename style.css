@@ -186,3 +186,7 @@ body.error404 #content header:first-child,
 body.page #content header:first-child {
 	padding-top: 0;
 }
+
+body.home #content .blog-index > article > article:first-child {
+	padding-top: 0;
+}
