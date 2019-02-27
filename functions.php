@@ -23,7 +23,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 /**
  * Show the search value.
  *
- * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @author Arnab Wahid <arnabwahid@gmail.com>
  * @since  1.0.0
  */
 function octopress_s() {
@@ -35,7 +35,7 @@ add_theme_support( 'title-tag' ); // Let WP handle the title tag.
 /**
  * Pagination.
  *
- * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @author Arnab Wahid <arnabwahid@gmail.com>
  * @since  1.0.0
  */
 function octopress_pagination() {
@@ -55,7 +55,7 @@ function octopress_pagination() {
 /**
  * The avatar.
  *
- * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @author Arnab Wahid <arnabwahid@gmail.com>
  * @since  1.0
  */
 function octopress_avatar() {
@@ -67,7 +67,7 @@ function octopress_avatar() {
 /**
  * Where can we get to the archive page.
  *
- * @author Aubrey Portwood <aubrey@webdevstudios.com>
+ * @author Arnab Wahid <arnabwahid@gmail.com>
  * @since  1.0
  */
 function octopress_the_archive_link() {
@@ -122,3 +122,10 @@ add_action( 'wp_head', function() {
 function is_linked_list() {
 	return false;
 }
+
+
+
+function register_my_menu() {
+  register_nav_menu( 'primary', __( 'Primary Menu', 'theme-slug' ) );
+}
+add_action( 'after_setup_theme', 'register_my_menu' );
