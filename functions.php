@@ -129,3 +129,6 @@ function register_my_menu() {
   register_nav_menu( 'primary', __( 'Primary Menu', 'theme-slug' ) );
 }
 add_action( 'after_setup_theme', 'register_my_menu' );
+
+// post formats
+add_theme_support( 'post-formats', array( 'aside', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video', 'audio' ) );
