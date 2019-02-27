@@ -44,7 +44,7 @@ function octopress_pagination() {
 	<?php if ( ! is_single() ) : ?>
 		<div class="pagination">
 			<?php next_posts_link( '&larr; Older' ); ?>
-			<a href="<?php octopress_the_archive_link(); ?>"><?php esc_html_e( 'Blog Archives', 'octopress-classic' ); ?></a>
+			<a href="<?php echo get_page_link( get_page_by_path( 'archives' ) ); ?>"><?php esc_html_e( 'Blog Archives', 'octopress-classic' ); ?></a>
 			<?php previous_posts_link( 'Newer &rarr;' ); ?>
 		</div>
 	<?php endif; ?>
