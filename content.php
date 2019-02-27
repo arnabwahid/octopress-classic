@@ -60,6 +60,11 @@
 	</header>
 
 	<div class="entry-content">
+		<?php 
+			if( has_post_thumbnail() ):
+    			the_post_thumbnail( 'full', array( 'class'  => 'noborder' ) );
+				endif; 
+			?>
 		<?php if ( is_single() ) : ?>
 			<?php the_content(); ?>
 		<?php else : ?>
