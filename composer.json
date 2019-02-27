@@ -1,5 +1,5 @@
 {
-    "name": "aubreypwd/octopress-classic",
+    "name": "arnabwahid/wp-octopress",
     "type": "wordpress-theme",
     "require": {
         "composer/installers": "~1.0"
@@ -7,8 +7,8 @@
     "license": "GNU GENERAL PUBLIC LICENSE",
     "authors": [
         {
-            "name": "Aubrey Portwood",
-            "email": "aubreypwd@gmail.com"
+            "name": "Arnab Wahid",
+            "email": "arnabwahid@gmail.com"
         }
     ],
     "require": {}
