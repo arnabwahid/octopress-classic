@@ -27,11 +27,12 @@
 			<?php else : ?>
 				<article <?php post_class( 'hentry' ); ?> role="article">
 					<header>
-						<h1 class="entry-title"><?php esc_html_e( '404, Page Not Found', 'octopress-classic' ); ?></h1>
+						<h1 class="entry-title"><?php esc_html_e( '404', 'octopress-classic' ); ?></h1>
 					</header>
 
 					<div class="entry-content">
-						<?php get_search_form(); ?>
+						<p><img class="size-medium aligncenter noborder" src="<?php echo get_template_directory_uri(); ?>/images/dinosaur.gif"></p>
+						<!--<?php get_search_form(); ?>-->
 					</div>
 				</article>
 			<?php endif; ?>
