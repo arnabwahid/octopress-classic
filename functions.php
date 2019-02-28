@@ -146,6 +146,8 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // soil
 add_theme_support('soil-clean-up');
+//add_theme_support('soil-relative-urls');
+//add_theme_support('soil-nice-search');
 
 
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
