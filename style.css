@@ -145,9 +145,9 @@ button {
 	margin-bottom: 0;
 }
 
-#respond textarea {
+/*#respond textarea {
 	width: 98%;
-}
+}*/
 
 #commentform label {
 	display: none;
@@ -235,4 +235,8 @@ article .flash-video.noborder {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	border-radius: none;
+}
+
+#commentform {
+	padding-right: .95em;
 }
