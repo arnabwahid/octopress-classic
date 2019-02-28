@@ -276,3 +276,6 @@ class comment_walker extends Walker_Comment {
         <?php }
 
     }
+
+    // hide password protected posts
+    
