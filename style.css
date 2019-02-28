@@ -243,3 +243,22 @@ article .flash-video.noborder {
 #commentform {
 	padding-right: .95em;
 }
+
+.pingback {
+	background-color: #ffffffad;
+	border-radius: 5px;
+	border: 1px solid #0000001a;
+	margin: 20px 0;
+
+}
+
+.pingback p {
+	padding: 0 20px;
+	font-style: italic;
+	letter-spacing: 1px;
+}
+.pingback p a {
+	display: block;
+	text-decoration: none;
+	font-style: normal;
+}
