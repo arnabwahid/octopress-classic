@@ -9,23 +9,23 @@
 
 ?>
 
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div id="primary main" class="site-content">
 	<div id="content" role="main">
 
 		<div>
-			<?php while ( have_posts() ) : ?>
-				<?php the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-			<?php endwhile; ?>
+			<?php while (have_posts()): ?>
+				<?php the_post();?>
+				<?php get_template_part('content', 'page');?>
+			<?php endwhile;?>
 		</div>
 
 		<aside class="sidebar thirds">
-			<?php dynamic_sidebar(); ?>
+			<?php dynamic_sidebar();?>
 		</aside>
 
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();?>
