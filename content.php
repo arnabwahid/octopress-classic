@@ -1,94 +1,105 @@
 <?php
-/**
- * Part: content.php
- *
- * @package    WordPress
- * @subpackage octopress-classic
- * @since      1.0
- */
+	/**
+	 * Part: content.php
+	 *
+	 * @package    WordPress
+	 * @subpackage octopress-classic
+	 * @since      1.0
+	 */
 
 ?>
 
-<?php if (is_page()): ?>
-	<article <?php post_class('hentry');?> id="page">
-<?php else: ?>
-	<article <?php post_class('hentry');?>>
-<?php endif;?>
+<?php if(is_page()): ?>
+<article <?php post_class('hentry'); ?> id="page">
+	<?php else: ?>
+	<article <?php post_class('hentry'); ?>>
+		<?php endif; ?>
 
-	<header>
-		<h1 class="entry-title">
-			<?php if (is_single() || is_page()): ?>
-				<?php if (is_linked_list()): ?>
-					<?php the_title();?><a class="linked-post-permalink" href="<?php the_permalink();?>"><span id="post-permalink">&infin;</span></a>
+		<header>
+			<h1 class="entry-title">
+				<?php if( is_single() || is_page() ): ?>
+					<?php if( is_linked_list() ): ?>
+						<?php the_title(); ?><a class="linked-post-permalink" href="<?php the_permalink(); ?>"><span
+									id="post-permalink">&infin;</span></a>
+					<?php else: ?>
+						<?php the_title(); ?>
+					<?php endif; ?>
 				<?php else: ?>
-					<?php the_title();?>
-				<?php endif;?>
-			<?php else: ?>
-				<?php if (is_linked_list()): ?>
-					<a href="<?php the_linked_list_link();?>"><?php the_title();?></a><a class="linked-post-permalink" href="<?php the_permalink();?>"><span id="post-permalink">&infin;</span></a>
-				<?php else: ?>
-					<a href="<?php the_permalink();?>"><?php the_title();?></a>
-				<?php endif;?>
-			<?php endif;?>
-		</h1>
+					<?php if( is_linked_list() ): ?>
+						<a href="<?php the_linked_list_link(); ?>"><?php the_title(); ?></a><a
+								class="linked-post-permalink" href="<?php the_permalink(); ?>"><span
+									id="post-permalink">&infin;</span></a>
+					<?php else: ?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php endif; ?>
+				<?php endif; ?>
+			</h1>
 
-		<?php if (is_single()): ?>
-			<?php if (is_linked_list()): ?>
-				<p class="meta">
-					<time datetime="<?php the_time('Y-m-d H:i:s');?>"><?php the_time(get_option('date_format'));?></time> | <a href="<?php the_permalink();?>"><?php esc_html_e('Permalink', 'octopress-classic');?></a> | <a href="<?php the_linked_list_link();?>"><?php esc_html_e('External Link', 'octopress-classic');?></a>
-				</p>
-			<?php else: ?>
-				<p class="meta">
-					<time datetime="<?php the_time('Y-m-d H:i:s');?>"><?php the_time(get_option('date_format'));?></time> | <a href="<?php the_permalink();?>"><?php esc_html_e('Permalink', 'octopress-classic');?></a>
-				</p>
-			<?php endif;?>
-
-		<?php else: ?>
-			<?php if (!is_page()): ?>
-				<?php if (is_linked_list()): ?>
+			<?php if( is_single() ): ?>
+				<?php if( is_linked_list() ): ?>
 					<p class="meta">
-						<time datetime="<?php the_time('Y-m-d H:i:s');?>"><?php the_time(get_option('date_format'));?></time> |
-						<a href="<?php echo (the_permalink() . '#comments'); ?>"><?php comments_number('comments', '1 comment', '% comments');?></a>
+						<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time>
+						| <a href="<?php the_permalink(); ?>"><?php esc_html_e('Permalink', 'octopress-classic'); ?></a>
+						|
+						<a href="<?php the_linked_list_link(); ?>"><?php esc_html_e('External Link', 'octopress-classic'); ?></a>
 					</p>
 				<?php else: ?>
 					<p class="meta">
-						<time datetime="<?php the_time('Y-m-d H:i:s');?>"><?php the_time(get_option('date_format'));?></time> | <a href="<?php echo (the_permalink() . '#comments'); ?>"><?php comments_number('comments', '1 comment', '% comments');?></a>
+						<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time>
+						| <a href="<?php the_permalink(); ?>"><?php esc_html_e('Permalink', 'octopress-classic'); ?></a>
 					</p>
-				<?php endif;?>
-			<?php endif;?>
-		<?php endif;?>
-	</header>
+				<?php endif; ?>
 
-	<div class="entry-content">
-		<?php
-if (has_post_thumbnail()):
-    the_post_thumbnail('full', array('class' => 'noborder'));
-endif;
-?>
-		<?php if (is_single()): ?>
-			<?php the_content();?>
-		<?php else: ?>
-			<?php the_content('(Read more...)');?>
-		<?php endif;?>
-	</div>
+			<?php else: ?>
+				<?php if( !is_page() ): ?>
+					<?php if( is_linked_list() ): ?>
+						<p class="meta">
+							<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time>
+							|
+							<a href="<?php echo(the_permalink() . '#comments'); ?>"><?php comments_number('comments', '1 comment', '% comments'); ?></a>
+						</p>
+					<?php else: ?>
+						<p class="meta">
+							<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time>
+							|
+							<a href="<?php echo(the_permalink() . '#comments'); ?>"><?php comments_number('comments', '1 comment', '% comments'); ?></a>
+						</p>
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endif; ?>
+		</header>
 
-	<?php if (is_single() && !is_page()): ?>
-		<footer>
-			<p class="meta">
+		<div class="entry-content">
+			<?php
+				if( has_post_thumbnail() ):
+					the_post_thumbnail('full', array('class' => 'noborder'));
+				endif;
+			?>
+			<?php if( is_single() ): ?>
+				<?php the_content(); ?>
+			<?php else: ?>
+				<?php the_content('(Read more...)'); ?>
+			<?php endif; ?>
+		</div>
+
+		<?php if( is_single() && !is_page() ): ?>
+			<footer>
+				<p class="meta">
 				<span class="byline author vcard">
-					<?php esc_html_e('Posted by ', 'octopress-classic');?><span class="fn"><?php the_author();?></span>
+					<?php esc_html_e('Posted by ', 'octopress-classic'); ?><span
+							class="fn"><?php the_author(); ?></span>
 				</span>
 
-				<time datetime="<?php the_time('Y-m-d H:i:s');?>"><?php the_time(get_option('date_format'));?></time>
-				<span class="categories"><?php the_tags('');?></span>
-			</p>
-		</footer>
-	<?php endif;?>
+					<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time>
+					<span class="categories"><?php the_tags(''); ?></span>
+				</p>
+			</footer>
+		<?php endif; ?>
 
-</article>
+	</article>
 
-<section>
-	<?php if (!is_page()): ?>
-		<?php comments_template();?>
-	<?php endif;?>
-</section>
+	<section>
+		<?php if( !is_page() ): ?>
+			<?php comments_template(); ?>
+		<?php endif; ?>
+	</section>
