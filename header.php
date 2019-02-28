@@ -28,7 +28,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href="/favicon.ico" rel="icon">
-		<link href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen, projection" rel="stylesheet" type="text/css"><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
+		<link href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen" rel="stylesheet" type="text/css"><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/modernizr-2.0.js"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/ender.js"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/octopress.js" type="text/javascript"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
@@ -49,13 +49,13 @@
 
 			<!-- Mobile Nav -->
 			<ul class="subscription" data-subscription="rss">
-				<li><a href="<?php echo esc_url( get_feed_link() ); ?>" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+				<li><a href="<?php echo esc_url( get_feed_link() ); ?>" type="application/rss+xml" title="Arnab Wahid &raquo; Feed">RSS</a></li> <!-- title="subscribe via RSS" -->
 			</ul>
 
 			<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<fieldset role="search">
+				<fieldset role="search"><!-- False positive: aria role valid. Bug in NU valivator -->
 					<input class="search" type="text" placeholder="Search" value="" name="s" id="s">
-					<input hidden type="submit" results="0" id="searchsubmit" placeholder="" value="Search">
+					<input hidden type="submit" id="searchsubmit" value="Search">
 				</fieldset> <!-- Mobile Nav End -->
 			</form>
 

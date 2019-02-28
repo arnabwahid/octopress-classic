@@ -35,11 +35,11 @@
 		<?php if ( is_single() ) : ?>
 			<?php if ( is_linked_list() ) : ?>
 				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'octopress-classic' ); ?></a> | <a href="<?php the_linked_list_link(); ?>"><?php esc_html_e( 'External Link', 'octopress-classic' ); ?></a>
+					<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'octopress-classic' ); ?></a> | <a href="<?php the_linked_list_link(); ?>"><?php esc_html_e( 'External Link', 'octopress-classic' ); ?></a>
 				</p>
 			<?php else : ?>
 				<p class="meta">
-					<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'octopress-classic' ); ?></a>
+					<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Permalink', 'octopress-classic' ); ?></a>
 				</p>
 			<?php endif; ?>
 
@@ -47,12 +47,12 @@
 			<?php if ( ! is_page() ) : ?>
 				<?php if ( is_linked_list() ) : ?>
 					<p class="meta">
-						<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> |
+						<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time> |
 						<a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
 					</p>
 				<?php else : ?>
 					<p class="meta">
-						<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
+						<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time> | <a href="<?php echo( the_permalink() . '#comments' ); ?>"><?php comments_number( 'comments', '1 comment', '% comments' ); ?></a>
 					</p>
 				<?php endif; ?>
 			<?php endif; ?>
@@ -79,7 +79,7 @@
 					<?php esc_html_e( 'Posted by ', 'octopress-classic' ); ?><span class="fn"><?php the_author(); ?></span>
 				</span>
 
-				<time datetime="<?php the_time(); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>
+				<time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 				<span class="categories"><?php the_tags( '' ); ?></span>
 			</p>
 		</footer>
