@@ -15,6 +15,23 @@
 
 @import 'octopress-classic.css';
 
+::placeholder {
+  font-style: italic;
+  letter-spacing: 1px;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+  line-height: 1em;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  line-height: 1em;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  line-height: 1em;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  line-height: 1em;
+}
+
 @media only screen and (max-width: 782px) {
 	.avatar {
 		display: none;
@@ -41,7 +58,9 @@ body > nav {
 }
 
 body > nav form .search {
-	line-height: 1.5em;
+	line-height: 1.2em;
+	width: 93%;
+	font-size: .95em;
 }
 
 .entry-content > ul,
@@ -147,7 +166,7 @@ button {
 @media only screen and (min-width: 1210px) {
 	body {
 		box-shadow: 0px 0px 53px #00000080;
-		margin-top: 70px;
+		/*margin-top: 70px;*/
 	}
 
 	body > header {
