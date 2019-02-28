@@ -149,3 +149,49 @@ add_theme_support('soil-clean-up');
 
 
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
+
+
+// comments field
+function my_update_comment_fields( $fields ) {
+
+    $commenter = wp_get_current_commenter();
+    $req       = get_option( 'require_name_email' );
+    $label     = $req ? '*' : ' ' . __( '(optional)', 'text-domain' );
+    $aria_req  = $req ? "aria-required='true'" : '';
+
+    $fields['author'] =
+        '<p class="comment-form-author">
+            <label for="author">' . __( "Name", "text-domain" ) . $label . '</label>
+            <input id="author" name="author" type="text" placeholder="' . esc_attr__( " Chuck Norris", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+        '" size="30" ' . $aria_req . ' />
+        </p>';
+
+    $fields['email'] =
+        '<p class="comment-form-email">
+            <label for="email">' . __( "Email", "text-domain" ) . $label . '</label>
+            <input id="email" name="email" type="email" placeholder="' . esc_attr__( " name@email.com", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+        '" size="30" ' . $aria_req . ' />
+        </p>';
+
+    $fields['url'] =
+        '<p class="comment-form-url">
+            <label for="url">' . __( "Website", "text-domain" ) . '</label>
+            <input id="url" name="url" type="url"  placeholder="' . esc_attr__( " http://google.com", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+        '" size="30" />
+            </p>';
+
+    return $fields;
+}
+add_filter( 'comment_form_default_fields', 'my_update_comment_fields' );
+
+function my_update_comment_field( $comment_field ) {
+
+  $comment_field =
+    '<p class="comment-form-comment">
+            <label for="comment">' . __( "Comment", "text-domain" ) . '</label>
+            <textarea required id="comment" name="comment" placeholder="' . esc_attr__( " Enter comment here...", "text-domain" ) . '" cols="45" rows="8" aria-required="true"></textarea>
+        </p>';
+
+  return $comment_field;
+}
+add_filter( 'comment_form_field_comment', 'my_update_comment_field' );
