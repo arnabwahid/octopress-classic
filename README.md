@@ -30,7 +30,7 @@ I made this theme for my blog, just for personal use; which requred very few fea
 - Theme Options Panel in the admin area
 - Customizer Options
 - Social menu icons
-- Native Menus
+- ~~Native Menus~~
 
 ### Author
  - [Arnab Wahid](https://github.com/arnabwahid/)
