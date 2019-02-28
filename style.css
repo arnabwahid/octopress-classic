@@ -103,9 +103,12 @@ button {
 .wp-audio-shortcode {
 	margin: 15px 0;
 }
+.blog-index article.sticky h1::after,
+.blog-index article.category-sticky h1::after {
+	/*box-shadow: 0px 0px 32px #00000042;*/
+	content: "🗲";
+	margin-right: 1em;
 
-.blog-index article.sticky {
-	box-shadow: 0px 0px 32px #00000042;
 }
 
 .commentlist {
