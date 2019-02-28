@@ -31,13 +31,13 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen" rel="stylesheet" type="text/css"><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/modernizr-2.0.js"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/ender.js"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
-		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/octopress.js" type="text/javascript"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
+		<script src="<?php echo get_template_directory_uri(); ?>/javascripts/octopress.js"></script><?php // @codingStandardsIgnoreLine: @TODO Enqueue this. ?>
 
 		<?php wp_head();?>
 	</head>
 
 	<body <?php body_class();?>>
-		<header role="banner">
+		<header>
 			<hgroup>
 				<?php octopress_avatar();?>
 				<h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name');?></a></h1>
@@ -45,11 +45,11 @@
 			</hgroup>
 		</header>
 
-		<nav role="navigation">
+		<nav role="navigation"><!-- role required for app.js menu. do not remove -->
 
 			<!-- Mobile Nav -->
 			<ul class="subscription" data-subscription="rss">
-				<li><a href="<?php echo esc_url(get_feed_link()); ?>" type="application/rss+xml" title="Arnab Wahid &raquo; Feed">RSS</a></li> <!-- title="subscribe via RSS" -->
+				<li><a href="<?php echo esc_url( get_feed_link() ); ?>" type="application/rss+xml" title="subscribe via RSS">RSS</a></li>
 			</ul>
 
 			<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url(home_url('/')); ?>">
