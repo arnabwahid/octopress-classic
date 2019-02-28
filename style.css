@@ -701,6 +701,7 @@ body.sidebar-footer .toggle-sidebar {
 	#main {
 		padding: 0;
 		margin: 0 auto;
+		margin-top: 1px;
 	}
 	#content {
 		overflow: visible;
