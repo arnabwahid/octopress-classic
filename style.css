@@ -318,3 +318,13 @@ input[type="submit"]:hover{
   width: 1px;
   overflow: hidden;
 }
+
+.gallery-caption {
+	font-weight: normal;
+}
+
+
+.bypostauthor {
+	letter-spacing: 1px;
+	font-weight: bold;
+}

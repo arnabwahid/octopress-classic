@@ -130,7 +130,7 @@ function is_linked_list()
 
 function register_my_menu()
 {
-    register_nav_menu('primary', __('Primary Menu', 'theme-slug'));
+    register_nav_menu('primary', __('Primary Menu', 'octopress-classic'));
 }
 add_action('after_setup_theme', 'register_my_menu');
 
@@ -158,27 +158,27 @@ function my_update_comment_fields( $fields ) {
 
     $commenter = wp_get_current_commenter();
     $req       = get_option( 'require_name_email' );
-    $label     = $req ? '*' : ' ' . __( '(optional)', 'text-domain' );
+    $label     = $req ? '*' : ' ' . __( '(optional)', 'octopress-classic' );
     $aria_req  = $req ? "aria-required='true'" : '';
 
     $fields['author'] =
         '<p class="comment-form-author">
-            <label for="author">' . __( "Name", "text-domain" ) . $label . '</label>
-            <input id="author" name="author" type="text" placeholder="' . esc_attr__( " Chuck Norris", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+            <label for="author">' . __( "Name", "octopress-classic" ) . $label . '</label>
+            <input id="author" name="author" type="text" placeholder="' . esc_attr__( " Chuck Norris", "octopress-classic" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
         '" size="30" ' . $aria_req . ' />
         </p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
-            <label for="email">' . __( "Email", "text-domain" ) . $label . '</label>
-            <input id="email" name="email" type="email" placeholder="' . esc_attr__( " name@email.com", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+            <label for="email">' . __( "Email", "octopress-classic" ) . $label . '</label>
+            <input id="email" name="email" type="email" placeholder="' . esc_attr__( " name@email.com", "octopress-classic" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
         '" size="30" ' . $aria_req . ' />
         </p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
-            <label for="url">' . __( "Website", "text-domain" ) . '</label>
-            <input id="url" name="url" type="url"  placeholder="' . esc_attr__( " http://google.com", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <label for="url">' . __( "Website", "octopress-classic" ) . '</label>
+            <input id="url" name="url" type="url"  placeholder="' . esc_attr__( " http://google.com", "octopress-classic" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
         '" size="30" />
             </p>';
 
@@ -190,8 +190,8 @@ function my_update_comment_field( $comment_field ) {
 
   $comment_field =
     '<p class="comment-form-comment">
-            <label for="comment">' . __( "Comment", "text-domain" ) . '</label>
-            <textarea required id="comment" name="comment" placeholder="' . esc_attr__( " Enter comment here...", "text-domain" ) . '" cols="45" rows="8" aria-required="true"></textarea>
+            <label for="comment">' . __( "Comment", "octopress-classic" ) . '</label>
+            <textarea required id="comment" name="comment" placeholder="' . esc_attr__( " Enter comment here...", "octopress-classic" ) . '" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 
   return $comment_field;
@@ -279,3 +279,5 @@ class comment_walker extends Walker_Comment {
 
     // hide password protected posts
     
+
+if ( ! isset( $content_width ) ) $content_width = 900;
