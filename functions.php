@@ -146,3 +146,6 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // soil
 add_theme_support('soil-clean-up');
+
+
+add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
