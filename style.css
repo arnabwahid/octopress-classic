@@ -262,3 +262,49 @@ article .flash-video.noborder {
 	text-decoration: none;
 	font-style: normal;
 }
+
+#commentform label[for="wp-comment-cookies-consent"]{
+	visibility: visible;
+	display: inline;
+	word-wrap:break-word;
+}
+
+#commentform input[name="wp-comment-cookies-consent"]{
+	width: auto;
+	display: inline;
+	line-height: 1.5em;
+	margin: 7px;
+	padding: 0;
+}
+
+#wp-comment-cookies-consent{
+	vertical-align: bottom;
+}
+
+input:focus {
+  color: #444;
+  border-color: #00000042;
+  -webkit-box-shadow: #00000042 0 0 4px, #00000042 0 0 3px inset;
+  -moz-box-shadow: #00000042 0 0 4px, #00000042 0 0 3px inset;
+  box-shadow: #00000042 0 0 4px, #00000042 0 0 3px inset;
+  background-color: #fff;
+  outline: none;
+}
+
+p.comment-form-cookies-consent{
+	background-color: #e2e3e5;
+	padding: 7px;
+	width: 100%;
+	border-radius: 4px;
+	border-color: #d6d8db;
+}
+
+input[type="submit"]{
+	background-color: #fefefe;
+	font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+input[type="submit"]:hover{
+	background-color: #d6d8db;
+}
