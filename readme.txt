@@ -44,7 +44,7 @@ Source: https://github.com/octopress/classic-theme
 
 == Changelog ==
 
-Version 2.0.0 (2019-03-01)
+Version 2.0.0 (2019-03-01) [Public release]
 -------------------------
 - Fixed the pagination not working on blog pages
 - Custom 404 page
