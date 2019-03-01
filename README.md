@@ -1,6 +1,9 @@
 # Octopress Classic Theme for WordPress
 The [Octopress](https://github.com/imathis/octopress) Classic Theme Ported to [WordPress](https://wordpress.org/).
 
+## [Click  Here](https://github.com/arnabwahid/octopress-classic/releases/download/2.0.0/octopress-classic.zip) to Download the Latest Release.
+---
+
 ![Screenshot](https://raw.githubusercontent.com/arnabwahid/octopress-classic/master/screenshot.png)
 
 _Theme Screenshot_
